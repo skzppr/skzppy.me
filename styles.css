@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'Fresh Salmon';
+    src: url('fonts/FreshSalmon.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Milkita';
+    src: url('fonts/Milkita.otf') format('opentype');
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: #1e1e1e;
+    padding: 20px; /* Reduced padding for mobile */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 90%; /* Adjusted width for mobile */
+    margin: 0 10px; /* Add margin for better spacing on small screens */
+}
+
+.profile-img {
+    width: 80px; /* Reduced size for mobile */
+    height: 80px; /* Reduced size for mobile */
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+h1 {
+    margin: 10px 0;
+    font-size: 1.8em; /* Adjusted font size for mobile */
+    color: #ffffff;
+    font-family: 'Fresh Salmon', cursive;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Reduced gap for mobile */
+    margin: 20px 0;
+}
+
+.social-icon {
+    width: 25px; /* Adjusted size for mobile */
+    height: 25px; /* Adjusted size for mobile */
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.social-icon.instagram:hover {
+    filter: invert(20%) sepia(100%) saturate(6868%) hue-rotate(298deg) brightness(94%) contrast(95%);
+}
+
+.social-icon.spotify:hover {
+    filter: invert(55%) sepia(87%) saturate(375%) hue-rotate(83deg) brightness(91%) contrast(88%);
+}
+
+.social-icon.tiktok:hover {
+    filter: invert(37%) sepia(100%) saturate(3382%) hue-rotate(325deg) brightness(102%) contrast(91%);
+}
+
+.social-icon.twitch:hover {
+    filter: invert(46%) sepia(100%) saturate(1556%) hue-rotate(221deg) brightness(95%) contrast(87%);
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.link-button {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px; /* Adjusted padding for mobile */
+    text-decoration: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1em;
+    transition: background 0.3s ease;
+    justify-content: center;
+    font-family: 'Milkita', sans-serif;
+    width: 80%; /* Adjusted width for mobile */
+    max-width: 200px; /* Adjusted max width for mobile */
+    margin: 0 auto; /* Center the buttons */
+}
+
+.link-button img {
+    width: 20px; /* Adjusted size for mobile */
+    height: 20px; /* Adjusted size for mobile */
+    margin-right: 10px;
+}
+
+.link-button.youtube {
+    background: #5865F2;
+}
+
+.link-button.youtube-alt {
+    background: #FF0000;
+}
+
+.link-button:hover {
+    opacity: 0.8;
+}
+
+
+/* Add styles here for fade-in and scale animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scale-hover {
+    transition: transform 0.3s ease;
+}
+
+.scale-hover:hover {
+    transform: scale(1.05);
+}

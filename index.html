@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add styles here for fade-in and scale animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scale-hover {
+            transition: transform 0.3s ease;
+        }
+
+        .scale-hover:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container fade-in">
+        <div class="profile">
+            <img src="pngs/profile.jpg" alt="Profile Picture" class="profile-img scale-hover">
+            <h1 class="scale-hover">skzppy</h1>
+            <div class="social-icons scale-hover">
+                <a href="http://instagram.com/skzppr" target="_blank"><img src="pngs/instagram.png" alt="Instagram" class="social-icon instagram"></a>
+                <a href="https://open.spotify.com/user/skippertubehd?si=3df66268b8d040ac" target="_blank"><img src="pngs/spotify_icon.png" alt="Spotify" class="social-icon spotify"></a>
+                <a href="https://www.tiktok.com/@_skzppy" target="_blank"><img src="pngs/tiktok_icon.png" alt="TikTok" class="social-icon tiktok"></a>
+                <a href="http://twitch.tv/skzppr" target="_blank"><img src="pngs/twitch_icon.png" alt="Twitch" class="social-icon twitch"></a>
+            </div>
+        </div>
+        <div class="links">
+            <a href="http://youtube.com/@skzppy" target="_blank" class="link-button youtube scale-hover"><img src="pngs/yt_icon.png" alt="YouTube" class="link-icon"> skippy (edits)</a>
+            <a href="https://www.youtube.com/@akzxmi" target="_blank" class="link-button youtube-alt scale-hover"><img src="pngs/yt_icon.png" alt="YouTube" class="link-icon"> akazumi (content)</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
