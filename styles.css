@@ -94,6 +94,10 @@ h1 {
     filter: invert(46%) sepia(100%) saturate(1556%) hue-rotate(221deg) brightness(95%) contrast(87%);
 }
 
+.social-icon.twitter:hover {
+    filter: invert(68%) sepia(17%) saturate(560%) hue-rotate(185deg) brightness(91%) contrast(82%);
+}
+
 .links {
     display: flex;
     flex-direction: column;
