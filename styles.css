@@ -258,7 +258,50 @@ body {
     }
 }
 
-/* Media Queries */
+/* Mobile-specific animations */
+@media (hover: none) and (pointer: coarse) {
+    .glass-card {
+        transform: none !important;
+        transition: transform 0.3s ease;
+    }
+
+    .glass-card:active {
+        transform: scale(0.98) !important;
+    }
+
+    .profile-img:active {
+        transform: scale(1.05);
+    }
+
+    .social-link {
+        transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .social-link:active {
+        transform: scale(0.95);
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    .link-button {
+        transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .link-button:active {
+        transform: scale(0.98);
+        opacity: 0.9;
+    }
+
+    /* Optimize glitch effect for mobile */
+    .glitch {
+        animation: none;
+    }
+
+    .glitch:active {
+        animation: glitch 300ms infinite;
+    }
+}
+
+/* Existing media queries */
 @media (max-width: 480px) {
     .container {
         padding: 10px;
@@ -280,5 +323,15 @@ body {
     .link-button {
         padding: 12px 20px;
         font-size: 1em;
+    }
+
+    /* Adjust animation timings for mobile */
+    .social-link, .link-button {
+        transition-duration: 0.2s;
+    }
+
+    /* Ensure smooth animations on mobile */
+    * {
+        -webkit-tap-highlight-color: transparent;
     }
 }
